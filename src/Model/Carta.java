@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Carta {
 
+    private int id;
     private String jogador;
     private Boolean estrela;
 
@@ -20,6 +21,14 @@ public class Carta {
     public void calculateOverall() {
         this.overall = (ritmo + finalizacao +
         conducao + passe + defesa) / 5;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getJogador() {
@@ -90,8 +99,8 @@ public class Carta {
         return posicoesSecundarias;
     }
 
-    public void setPosicoesSecundarias(List<Posicao> posicoesSecundarias) {
-        this.posicoesSecundarias = posicoesSecundarias;
+    public void setPosicoesSecundarias(List<Posicao> posicoes) {
+        this.posicoesSecundarias = posicoes;
     }
 
     public Pais getPais() {
